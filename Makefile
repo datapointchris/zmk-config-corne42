@@ -29,7 +29,7 @@ draw:
 	@echo "$(SVG) generated"
 
 build:
-	./build
+	./build.sh
 
 sync: align draw build
 	@echo "Sync complete"

@@ -2,3 +2,15 @@
 *.uf2
 *.jpg
 .planning/
+.claude/
+
+# West build artifacts (created by Docker build)
+.west/
+zmk/
+zephyr/
+modules/
+bootloader/
+tools/
+build/
+zmk-shared/
+optional/
