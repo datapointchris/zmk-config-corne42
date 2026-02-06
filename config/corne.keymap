@@ -25,35 +25,35 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <1 2>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp TILDE>;
         };
         combo_lparen {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <16 15>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp LPAR>;
         };
         combo_lbracket {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <14 15>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp LBKT>;
         };
         combo_lbrace {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <14 16>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp LBRC>;
         };
         combo_underscore {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <13 14>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp UNDERSCORE>;
         };
         /* ----- RIGHT HAND ----- */
@@ -61,28 +61,28 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <19 20>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp RPAR>;
         };
         combo_rbracket {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <20 21>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp RBKT>;
         };
         combo_rbrace {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <19 21>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp RBRC>;
         };
         combo_hyphen {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <21 22>;
-            layers = <BASE>;
+            layers = <BASE COLEMAK>;
             bindings = <&kp MINUS>;
         };
         combo_colemak_toggle {
