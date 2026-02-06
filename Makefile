@@ -2,7 +2,6 @@
 
 CONFIG_DIR := config
 KEYMAP := $(CONFIG_DIR)/corne.keymap
-LAYOUT := corne_layout.json
 DRAWER_YAML := corne_keymap.yaml
 SVG := corne_keymap.svg
 
@@ -22,14 +21,14 @@ help:
 	@echo "  clean   - Remove generated files and UF2s"
 
 align:
-	keymap-align --keymap $(KEYMAP) --layout $(LAYOUT)
+	keymap-align -k $(KEYMAP)
 
 draw:
 	keymap -c keymap_drawer.config.yaml draw $(DRAWER_YAML) > $(SVG)
 	@echo "$(SVG) generated"
 
 build:
-	./build.sh
+	zmk-build
 
 sync: align draw build
 	@echo "Sync complete"
