@@ -16,11 +16,9 @@ ZMK firmware configuration for the Corne 42-key split keyboard.
 |---|---|---|
 | 0 | BASE | QWERTY + home row mods + 8 combos (brackets, tilde, underscore, hyphen) |
 | 1 | DEVLEFT | Programming symbols (left hand) |
-| 3 | NPAD | Number pad (right) + nav (left) |
-| 4 | SYSTEM | Bluetooth, bootloader, media, output toggle |
-| 6 | NAV | Arrow keys + F1-F12 + sticky modifiers |
-
-Skips layers 2 (DEVRIGHT) and 5 (MOUSE) from the shared set.
+| 2 | NPAD | Number pad (right) + nav (left) |
+| 3 | SYSTEM | Bluetooth, bootloader, media, output toggle |
+| 4 | NAV | Arrow keys + F1-F12 + sticky modifiers |
 
 ## Notable
 

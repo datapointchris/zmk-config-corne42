@@ -27,8 +27,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 
 ## Layers Used
 
-Uses 5 of 7 shared layers: BASE (0), DEVLEFT (1), NPAD (3), SYSTEM (4), NAV (6).
-Skips DEVRIGHT (2) and MOUSE (5).
+Uses all 5 shared layers: BASE (0), DEVLEFT (1), NPAD (2), SYSTEM (3), NAV (4).
 
 ## Guardrails
 
