@@ -2,22 +2,22 @@ layout: {zmk_keyboard: corne}
 layers:
   BASE:
   - [TAB, Q, W, E, R, T, Y, U, I, O, P, \]
-  - [ESC, {t: A, h: Ctrl/Alt}, {t: S, h: Shift}, {t: D, h: Opt/Super}, {t: F, h: Cmd/Ctrl}, G, H, {t: J, h: Cmd/Ctrl}, {t: K, h: Opt/Super}, {t: L, h: Shift}, {t: ;, h: Ctrl/Alt}, '''']
+  - [ESC, {t: A, h: GUI}, {t: S, h: Alt}, {t: D, h: Shift}, {t: F, h: Ctrl}, G, H, {t: J, h: Ctrl}, {t: K, h: Shift}, {t: L, h: Alt}, {t: ;, h: GUI}, '''']
   - [SYSTEM, Z, X, C, V, B, N, M, ',', ., /, SYSTEM]
   - [{h: WM}, {t: BSPC, h: NPAD}, {t: DEL, h: NAV}, {t: RET, h: DEVLEFT}, {t: SPACE, h: DEVLEFT}, Aero/Caps]
   COLEMAK:
   - [▽, Q, W, F, P, B, J, L, U, Y, ;, ▽]
-  - [▽, {t: A, h: Ctrl/Alt}, {t: R, h: Shift}, {t: S, h: Opt/Super}, {t: T, h: Cmd/Ctrl}, G, M, {t: N, h: Cmd/Ctrl}, {t: E, h: Opt/Super}, {t: I, h: Shift}, {t: O, h: Ctrl/Alt}, ▽]
+  - [▽, {t: A, h: GUI}, {t: R, h: Alt}, {t: S, h: Shift}, {t: T, h: Ctrl}, G, M, {t: N, h: Ctrl}, {t: E, h: Shift}, {t: I, h: Alt}, {t: O, h: GUI}, ▽]
   - [▽, Z, X, C, D, V, K, H, ',', ., /, ▽]
   - [▽, ▽, ▽, ▽, ▽, ▽]
   DEVLEFT:
   - ['`', '!', '@', '%', '&', '?', '', '', '', '', '', '']
-  - ['#', ^, '=', _, $, '*', '', '', '', '', '', '']
+  - ['#', ^, '=', _, $, '*', '', ▽, ▽, ▽, ▽, '']
   - ['~', <, '|', '-', '>', '', '', '', '', '', '', '']
   - ['', ▽, ▽, {type: held}, ▽, ▽]
   NPAD:
   - ['', '', '', PgUp, '', '', +, 7, 8, 9, '-', '|']
-  - [▽, '', HOME, PgDn, END, INSERT, _, {t: 4, h: Cmd/Ctrl}, {t: 5, h: Opt/Super}, {t: 6, h: Shift}, {t: ':', h: Ctrl/Alt}, '-']
+  - [▽, GUI, {t: HOME, h: Alt}, {t: PgDn, h: Shift}, {t: END, h: Ctrl}, INSERT, _, {t: 4, h: Ctrl}, {t: 5, h: Shift}, {t: 6, h: Alt}, {t: ':', h: GUI}, '-']
   - [▽, '', '', '', '', '', ',', 1, 2, 3, ., ENTER]
   - [▽, {type: held}, ▽, ▽, 0, 0]
   SYSTEM:
@@ -27,22 +27,22 @@ layers:
   - ['', OUT USB, OUT BLE, '', '', '']
   NAV:
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
-  - [▽, Ctrl/Alt, Shift, Opt/Super, Cmd/Ctrl, ▽, LEFT, DOWN, UP, RIGHT, '', '']
+  - [▽, GUI, Alt, Shift, Ctrl, ▽, LEFT, DOWN, UP, RIGHT, '', '']
   - [▽, ▽, ▽, ▽, ▽, ▽, '', '', '', '', '', '']
   - ['', ▽, {type: held}, ▽, '', '']
   WM:
-  - ['', CLOSE, '', ws E, RESIZE, '', MOVE ←, MOVE ↓, MOVE ↑, MOVE →, '', '']
-  - ['', ws A, ws S, ws D, FLOAT, '', FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, '', '']
-  - ['', ws Z, ws X, '', '', ws B, '', ws M, '', '', '', '']
-  - [▽, '', '', FULL, '', TAB ↔]
+  - ['', CLOSE, '', ws E, RESIZE, '', MOVE ←, MOVE ↓, MOVE ↑, MOVE →, '', LAYOUT]
+  - ['', ws A, ws S, ws D, FLOAT, '', FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, '', ORIENT]
+  - ['', ws Z, ws X, '', '', ws B, '', ws M, '', '', SHIFT, '']
+  - [{type: held}, '', '', FULL, SCRATCH, TAB ↔]
 combos:
   - {p: [1, 2], k: '~', l: [BASE, COLEMAK]}
   - {p: [15, 16], k: '(', l: [BASE, COLEMAK]}
   - {p: [14, 15], k: '[', l: [BASE, COLEMAK]}
-  - {p: [14, 16], k: '{', l: [BASE], a: top, o: -0.05}
+  - {p: [14, 16], k: '{', l: [BASE, COLEMAK], a: top, o: -0.05}
   - {p: [13, 14], k: '_', l: [BASE, COLEMAK]}
   - {p: [19, 20], k: ')', l: [BASE, COLEMAK]}
   - {p: [20, 21], k: ']', l: [BASE, COLEMAK]}
-  - {p: [19, 21], k: '}', l: [BASE], a: top, o: -0.05}
+  - {p: [19, 21], k: '}', l: [BASE, COLEMAK], a: top, o: -0.05}
   - {p: [21, 22], k: '-', l: [BASE, COLEMAK]}
   - {p: [38, 39], k: COLEMAK, l: [BASE, COLEMAK]}
