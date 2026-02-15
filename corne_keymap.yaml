@@ -17,7 +17,7 @@ layers:
   - ['', ▽, ▽, {type: held}, ▽, ▽]
   NPAD:
   - ['', '', '', PgUp, '', '', +, 7, 8, 9, '-', '|']
-  - [▽, GUI, {t: HOME, h: Alt}, {t: PgDn, h: Shift}, {t: END, h: Ctrl}, INSERT, _, {t: 4, h: Ctrl}, {t: 5, h: Shift}, {t: 6, h: Alt}, {t: ':', h: GUI}, '-']
+  - [▽, GUI, {t: HOME, h: Alt}, {t: PgDn, h: Shift}, {t: END, h: Ctrl}, INSERT, $, {t: 4, h: Ctrl}, {t: 5, h: Shift}, {t: 6, h: Alt}, {t: ':', h: GUI}, '-']
   - [▽, '', '', '', '', '', ',', 1, 2, 3, ., ENTER]
   - [▽, {type: held}, ▽, ▽, 0, 0]
   SYSTEM:
