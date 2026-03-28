@@ -153,9 +153,9 @@
         WM {
             display-name = "WM";
             bindings = <
-    &none        &kp LG(Q)    &none           &kp WMK(E)         &kp WMK(R)      &none                                              &kp WMSK(H)          &kp WMSK(J)     &kp WMSK(K)     &kp WMSK(L)      &none            &kp WMK(BSLH)
+    &none        &none        &none           &kp WMK(E)         &kp WMK(R)      &none                                              &kp WMSK(H)          &kp WMSK(J)     &kp WMSK(K)     &kp WMSK(L)      &none            &kp WMK(BSLH)
     &none        &kp WMK(A)   &kp WMK(S)      &kp WMK(D)         &kp WMK(F)      &none                                              &kp WMK(H)           &kp WMK(J)      &kp WMK(K)      &kp WMK(L)       &none            &kp WMK(SQT)
-    &none        &kp WMK(Z)   &kp WMK(X)      &none              &none           &kp WMK(B)                                         &none                &kp WMK(M)      &none           &none            &kp LSHIFT       &none
+    &none        &kp WMK(Z)   &kp WMK(X)      &none              &kp WMK(M)      &none                                              &kp WMCK(H)          &kp WMCK(J)     &kp WMCK(K)     &kp WMCK(L)      &none            &none
                                                                  &trans          &none            &none          &kp WMSK(F)        &kp LG(GRAVE)        &kp WMK(TAB)
             >;
         };
