@@ -155,7 +155,7 @@
             bindings = <
     &none        &none        &none           &kp WMK(E)         &kp WMK(R)      &none                                              &kp WMSK(H)          &kp WMSK(J)     &kp WMSK(K)     &kp WMSK(L)      &none            &kp WMK(BSLH)
     &none        &kp WMK(A)   &kp WMK(S)      &kp WMK(D)         &kp WMK(F)      &none                                              &kp WMK(H)           &kp WMK(J)      &kp WMK(K)      &kp WMK(L)       &none            &kp WMK(SQT)
-    &none        &kp WMK(Z)   &kp WMK(X)      &none              &kp WMK(M)      &none                                              &kp WMCK(H)          &kp WMCK(J)     &kp WMCK(K)     &kp WMCK(L)      &kp LSHIFT       &none
+    &none        &kp WMK(Z)   &kp WMK(X)      &none              &kp WMK(M)      &none                                              &kp WMCK(H)          &kp WMCK(J)     &kp WMCK(K)     &kp WMCK(L)      &kp LSHIFT       &kp WMCK(G)
                                                                  &trans          &none            &none          &kp WMSK(F)        &kp LG(GRAVE)        &kp WMK(TAB)
             >;
         };
@@ -173,7 +173,7 @@
             bindings = <
     &trans       &trans       &trans          &kp LA(E)          &kp LA(R)       &trans                                             &kp LA(LS(H))        &kp LA(LS(J))   &kp LA(LS(K))   &kp LA(LS(L))    &trans           &kp LA(BSLH)
     &trans       &kp LA(A)    &kp LA(S)       &kp LA(D)          &kp LA(F)       &trans                                             &kp LA(H)            &kp LA(J)       &kp LA(K)       &kp LA(L)        &trans           &kp LA(SQT)
-    &trans       &kp LA(Z)    &kp LA(X)       &trans             &kp LA(M)       &trans                                             &kp LA(LC(H))        &kp LA(LC(J))   &kp LA(LC(K))   &kp LA(LC(L))    &trans           &trans
+    &trans       &kp LA(Z)    &kp LA(X)       &trans             &kp LA(M)       &trans                                             &kp LA(LC(H))        &kp LA(LC(J))   &kp LA(LC(K))   &kp LA(LC(L))    &trans           &kp LA(LC(G))
                                                                  &trans          &trans           &trans         &kp LA(LS(F))      &trans               &kp LA(TAB)
             >;
         };
