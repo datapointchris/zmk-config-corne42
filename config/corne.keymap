@@ -102,7 +102,7 @@
     &kp TAB      &kp Q        &kp W           &kp E              &kp R           &kp T                                              &kp Y                &kp U           &kp I           &kp O            &kp P            &kp BSLH
     &kp ESC      &hml LGUI A  &hml LALT S     &hml LSHIFT D      &hml LCTRL F    &kp G                                              &kp H                &hmr RCTRL J    &hmr RSHIFT K   &hmr RALT L      &hmr RGUI SEMI   &kp SINGLE_QUOTE
     &mo SYSTEM   &kp Z        &kp X           &kp C              &kp V           &kp B                                              &kp N                &kp M           &kp COMMA       &kp DOT          &kp FSLH         &mo SYSTEM
-                                                                 &mo WM          &ltlt NPAD BSPC  &ltlt NAV DEL  &ltrt DEVLEFT RET  &ltrt DEVLEFT SPACE  &caps_aero
+                                                                 &mo WM          &ltlt NPAD BSPC  &ltlt NAV DEL  &ltrt DEVLEFT RET  &ltrt DEVLEFT SPACE  &caps_word
             >;
         };
         COLEMAK {
@@ -138,7 +138,7 @@
     &bt BT_CLR   &bt_0        &bt_1           &bt_2              &bt_3           &none                                              &none                &none           &kp C_VOL_UP    &none            &none            &bt BT_CLR_ALL
     &bootloader  &none        &none           &none              &none           &ctrlaltdel                                        &none                &kp C_PREV      &kp C_PP        &kp C_NEXT       &none            &bootloader
     &sys_reset   &none        &none           &none              &none           &none                                              &none                &none           &kp C_VOL_DN    &none            &none            &sys_reset
-                                                                 &none           &out OUT_USB     &out OUT_BLE   &none              &none                &none
+                                                                 &none           &out OUT_USB     &out OUT_BLE   &tog 7             &none                &none
             >;
         };
         NAV {
@@ -158,6 +158,32 @@
     &none        &kp WMK(Z)   &kp WMK(X)      &none              &kp WMK(M)      &none                                              &kp WMCK(H)          &kp WMCK(J)     &kp WMCK(K)     &kp WMCK(L)      &none            &none
                                                                  &trans          &none            &none          &kp WMSK(F)        &kp LG(GRAVE)        &kp WMK(TAB)
             >;
+        };
+        OS_MAC {
+            display-name = "macOS";
+            bindings = <
+    &trans       &trans       &trans          &trans             &trans          &trans                                             &trans               &trans          &trans          &trans           &trans           &trans
+    &trans       &trans       &trans          &trans             &trans          &trans                                             &trans               &trans          &trans          &trans           &trans           &trans
+    &trans       &trans       &trans          &trans             &trans          &trans                                             &trans               &trans          &trans          &trans           &trans           &trans
+                                                                 &trans          &trans           &trans         &trans             &trans               &trans
+            >;
+        };
+        WM_MAC {
+            display-name = "WM Mac";
+            bindings = <
+    &trans       &trans       &trans          &kp LA(E)          &kp LA(R)       &trans                                             &kp LA(LS(H))        &kp LA(LS(J))   &kp LA(LS(K))   &kp LA(LS(L))    &trans           &kp LA(BSLH)
+    &trans       &kp LA(A)    &kp LA(S)       &kp LA(D)          &kp LA(F)       &trans                                             &kp LA(H)            &kp LA(J)       &kp LA(K)       &kp LA(L)        &trans           &kp LA(SQT)
+    &trans       &kp LA(Z)    &kp LA(X)       &trans             &kp LA(M)       &trans                                             &kp LA(LC(H))        &kp LA(LC(J))   &kp LA(LC(K))   &kp LA(LC(L))    &trans           &trans
+                                                                 &trans          &trans           &trans         &kp LA(LS(F))      &trans               &kp LA(TAB)
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        wm_mac {
+            if-layers = <6 7>;
+            then-layer = <8>;
         };
     };
 };
