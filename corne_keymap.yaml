@@ -33,7 +33,7 @@ layers:
   WM:
   - ['', '', '', ws E, RESIZE, '', MOVE ←, MOVE ↓, MOVE ↑, MOVE →, '', LAYOUT]
   - ['', ws A, ws S, ws D, FLOAT, '', FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, '', ORIENT]
-  - ['', ws Z, ws X, '', ws M, '', JOIN ←, JOIN ↓, JOIN ↑, JOIN →, '', '']
+  - ['', ws Z, ws X, '', ws M, '', JOIN ←, JOIN ↓, JOIN ↑, JOIN →, SHIFT, '']
   - [{type: held}, '', '', FULL, 'Cmd+`', TAB ↔]
   OS_MAC:
   - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
