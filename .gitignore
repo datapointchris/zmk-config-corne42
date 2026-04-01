@@ -1,7 +1,6 @@
 .DS_Store
 *.uf2
 *.jpg
-.planning/
 .claude/
 
 # West build artifacts (created by Docker build)
