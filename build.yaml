@@ -6,3 +6,6 @@ include:
   - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_view
     artifact-name: corne_right
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: settings_reset
