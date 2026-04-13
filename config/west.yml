@@ -2,12 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: datapointchris
-      url-base: https://github.com/datapointchris
   projects:
-    - name: zmk-shared
-      remote: datapointchris
-      revision: main
     - name: zmk
       remote: zmkfirmware
       revision: main
