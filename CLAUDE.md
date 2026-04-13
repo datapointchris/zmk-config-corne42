@@ -48,6 +48,7 @@ Combos include `OS_MAC_LAYER` in their `layers` list so they fire in both OS mod
 
 ## Guardrails
 
+- **Rebuild firmware after every keymap change** — run `make sync` (align + draw + build) before committing. Source changes without a build are useless; the UF2 file is what gets flashed.
 - Position numbers differ from Glove80 (42-key vs 80-key) — shared behaviors use position macros defined at the top of each keymap
 - Split config: left half is central (USB), right is peripheral (BLE only) — don't enable USB on right
 - The `corne.conf` applies to both halves; side-specific settings go in `corne_left.conf` / `corne_right.conf`
