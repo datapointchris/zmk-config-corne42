@@ -48,9 +48,8 @@ Combos include `OS_MAC_LAYER` in their `layers` list so they fire in both OS mod
 
 ## Guardrails
 
-- **Rebuild firmware after every keymap change** — run `make sync` (align + draw + build) before committing. Source changes without a build are useless; the UF2 file is what gets flashed.
+See `~/code/zmk/shared/CLAUDE.md` guardrails for the universal build-before-commit rule and the runtime-OS-switching rules (combos must include `OS_MAC_LAYER`; Shift uses `hmls`/`hmrs`) — corne42 is a runtime-OS-switching board, so both apply here. Board-specific:
+
 - Position numbers differ from Glove80 (42-key vs 80-key) — shared behaviors use position macros defined at the top of each keymap
 - Split config: left half is central (USB), right is peripheral (BLE only) — don't enable USB on right
 - The `corne.conf` applies to both halves; side-specific settings go in `corne_left.conf` / `corne_right.conf`
-- Combos must include `OS_MAC_LAYER` in their `layers` property or they won't fire when macOS mode is active
-- Shift uses `hmls`/`hmrs` (faster timing) instead of `hml`/`hmr`
