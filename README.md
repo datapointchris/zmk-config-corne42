@@ -13,7 +13,7 @@ ZMK firmware configuration for the Corne 42-key split keyboard.
 ## Layers
 
 | # | Layer | Notes |
-|---|---|---|
+| --- | --- | --- |
 | 0 | BASE | QWERTY + home row mods + 8 combos (brackets, tilde, underscore, hyphen) |
 | 1 | DEVLEFT | Programming symbols (left hand) |
 | 2 | NPAD | Number pad (right) + nav (left) |

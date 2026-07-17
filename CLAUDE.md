@@ -7,7 +7,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 ## Key Files
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `config/corne.keymap` | Keymap with 9 layers, combos, conditional layers, key position defines |
 | `config/corne.conf` | Shared config (BT power, debounce, display, pointing) |
 | `config/corne_left.conf` | Central-specific (USB, smooth scrolling) |
@@ -29,7 +29,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 ## Layers
 
 | # | Layer | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | 0 | BASE | QWERTY + home row mods (GASC) + combos |
 | 1 | COLEMAK | Colemak-DH, toggled via inner thumb combo |
 | 2 | DEVLEFT | Programming symbols (left hand) |
