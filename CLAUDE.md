@@ -14,7 +14,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 | `config/corne_right.conf` | Peripheral-specific (USB disabled) |
 | `config/west.yml` | West manifest — pulls zmk-shared + upstream ZMK |
 | `build.yaml` | Build matrix: nice_nano + corne_left/right + nice_view |
-| `Makefile` | align, draw, build, sync, clean |
+| `Makefile` | Standard targets — see `~/code/zmk/shared/CLAUDE.md` |
 | `keymap_drawer.config.yaml` | Keymap-drawer config for this keyboard |
 | `keymap_align.toml` | Keymap-align config |
 
