@@ -49,7 +49,9 @@ navigation into pane resize without a second layer, held as a thumb-and-index
 pinch. It sits on a left-hand key rather than a thumb because 37 is now the
 layer key itself, which is why TMUX needs `ltltb`: `ltlt` would resolve the
 hold as a backspace when `F` is pressed first. Side effect: shift also reaches
-the macros, so zoom and the splits do nothing while it is held.
+the macros, so zoom and the splits do nothing while it is held. Rename is worse
+than nothing — shifted, its `,` becomes `<`, which tmux binds to move the
+session left.
 
 ## Runtime OS Switching
 
