@@ -49,7 +49,7 @@ layers:
   - ['', '', '', '', '', '', COPY, WIN ⇤, WIN ←, WIN →, WIN ⇥, 'SPLIT |']
   - ['', '', '', '', '', {type: held}, PANE ←, PANE ↓, PANE ↑, PANE →, LAST PANE, 'SPLIT -']
   - ['', '', '', '', '', '', NEW WIN, SES ⇤, SES ←, SES →, SES ⇥, '']
-  - ['', RESIZE, '', ZOOM, PICKER, FINDER]
+  - ['', {t: RESIZE, type: holdmod}, '', ZOOM, PICKER, FINDER]
 combos:
   - {p: [1, 2], k: '~', l: [BASE, COLEMAK]}
   - {p: [15, 16], k: '(', l: [BASE, COLEMAK]}

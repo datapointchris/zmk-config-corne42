@@ -126,6 +126,10 @@ path.combo {
 
 rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1;}
 rect.held, rect.combo.held { fill: #fdd;}
+/* A modifier held within a layer rather than to reach one. Same pink as
+   held, but its own class so it is not the layer-activation marker — the
+   drift check treats a held cell as matching whatever the keymap has. */
+rect.holdmod, rect.combo.holdmod { fill: #fdd;}
 rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
 rect.thumb, rect.combo.thumb { fill: #303030; stroke-width: 0;}
 svg.keymap { background-color: #303030;}
@@ -2010,9 +2014,9 @@ path.combo { stroke-width: 3;}
 <g transform="translate(400, 366)" class="key keypos-36">
 <rect rx="6" ry="6" x="-48" y="-48" width="96" height="96" class="key"/>
 </g>
-<g transform="translate(510, 380) rotate(15.0)" class="key keypos-37">
-<rect rx="6" ry="6" x="-48" y="-48" width="96" height="96" class="key"/>
-<text x="0" y="0" class="key tap">RESIZE</text>
+<g transform="translate(510, 380) rotate(15.0)" class="key holdmod keypos-37">
+<rect rx="6" ry="6" x="-48" y="-48" width="96" height="96" class="key holdmod"/>
+<text x="0" y="0" class="key holdmod tap">RESIZE</text>
 </g>
 <g transform="translate(627, 400) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-48" y="-73" width="96" height="146" class="key"/>

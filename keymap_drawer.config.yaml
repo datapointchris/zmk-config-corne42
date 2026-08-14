@@ -51,6 +51,10 @@ draw_config:
   svg_extra_style: |
     rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1;}
     rect.held, rect.combo.held { fill: #fdd;}
+    /* A modifier held within a layer rather than to reach one. Same pink as
+       held, but its own class so it is not the layer-activation marker — the
+       drift check treats a held cell as matching whatever the keymap has. */
+    rect.holdmod, rect.combo.holdmod { fill: #fdd;}
     rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
     rect.thumb, rect.combo.thumb { fill: #303030; stroke-width: 0;}
     svg.keymap { background-color: #303030;}
