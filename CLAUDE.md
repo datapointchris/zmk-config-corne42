@@ -8,7 +8,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 
 | File | Purpose |
 | --- | --- |
-| `config/corne.keymap` | Keymap with 9 layers, combos, conditional layers, key position defines |
+| `config/corne.keymap` | Keymap with 10 layers, combos, conditional layers, key position defines |
 | `config/corne.conf` | Shared config (BT power, debounce, display, pointing) |
 | `config/corne_left.conf` | Central-specific (USB, smooth scrolling) |
 | `config/corne_right.conf` | Peripheral-specific (USB disabled) |
@@ -39,6 +39,14 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 | 6 | WM | Window manager (Linux default: Super+key) |
 | 7 | OS_MAC | Ghost flag layer (all &trans), toggled for macOS mode |
 | 8 | WM_MAC | macOS WM override (Alt+key), auto-activates via conditional layer when WM + OS_MAC both active |
+| 9 | TMUX | tmux panes, windows and sessions on the right hand, held on `G` (`&ltl TMUX G`) |
+
+The TMUX layer emits finished chords and prefix macros, so every action is two
+keys. That is the whole reason it exists — NAV emits bare arrows, which leaves
+the left hand to add Ctrl or Ctrl+Shift and makes the same action three or four.
+Position 37 inside the layer is `&kp LSHIFT`, which turns pane navigation into
+pane resize without a second layer. Same-position side effect: shift also
+reaches the macros, so zoom and the splits do nothing while it is held.
 
 ## Runtime OS Switching
 
