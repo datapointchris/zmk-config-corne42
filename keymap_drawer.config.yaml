@@ -48,15 +48,20 @@ draw_config:
   glyph_shifted_size: 14
   shrink_wide_legends: 0
 
+  # keymap-drawer's own dark palette, rather than overriding rect.key by hand.
+  # Darkening the key alone leaves black legends — svg.keymap sets
+  # `fill: #24292e` and every legend inherits it — and leaves the white
+  # `paint-order: stroke` halo on text.label. dark_mode moves all three
+  # together, and gives combos their own blue so they still separate.
+  dark_mode: true
+
   svg_extra_style: |
-    rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1;}
-    rect.held, rect.combo.held { fill: #fdd;}
-    /* A modifier held within a layer rather than to reach one. Same pink as
+    /* A modifier held within a layer rather than to reach one. Same red as
        held, but its own class so it is not the layer-activation marker — the
        drift check treats a held cell as matching whatever the keymap has. */
-    rect.holdmod, rect.combo.holdmod { fill: #fdd;}
-    rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
-    rect.thumb, rect.combo.thumb { fill: #303030; stroke-width: 0;}
-    svg.keymap { background-color: #303030;}
-    text.label { stroke: none; fill: #e0f0f0;}
+    rect.holdmod, rect.combo.holdmod { fill: #854747;}
+    /* SVG has no background, so this reaches a browser and nothing else. In a
+       terminal the drawing composites onto whatever is behind it, which is
+       already dark — that is why the keys were the only thing to fix. */
+    svg.keymap { background-color: #24272e;}
     path.combo { stroke-width: 3;}

@@ -124,16 +124,23 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
-rect.key { fill: #f6f8fa; stroke: #c9cccf; stroke-width: 1;}
-rect.held, rect.combo.held { fill: #fdd;}
-/* A modifier held within a layer rather than to reach one. Same pink as
+svg.keymap { fill: #d1d6db; }
+rect.key { fill: #3f4750; }
+rect.key, rect.combo { stroke: #60666c; }
+rect.combo, rect.combo-separate { fill: #1f3d7a; }
+rect.held, rect.combo.held { fill: #854747; }
+text.label, text.footer { stroke: black; }
+text.trans { fill: #7e8184; }
+path.combo { stroke: #7f7f7f; }
+
+/* A modifier held within a layer rather than to reach one. Same red as
    held, but its own class so it is not the layer-activation marker — the
    drift check treats a held cell as matching whatever the keymap has. */
-rect.holdmod, rect.combo.holdmod { fill: #fdd;}
-rect.ghost, rect.combo.ghost { fill: #ddd; stroke-dasharray: none; stroke-width: 1;}
-rect.thumb, rect.combo.thumb { fill: #303030; stroke-width: 0;}
-svg.keymap { background-color: #303030;}
-text.label { stroke: none; fill: #e0f0f0;}
+rect.holdmod, rect.combo.holdmod { fill: #854747;}
+/* SVG has no background, so this reaches a browser and nothing else. In a
+   terminal the drawing composites onto whatever is behind it, which is
+   already dark — that is why the keys were the only thing to fix. */
+svg.keymap { background-color: #24272e;}
 path.combo { stroke-width: 3;}
 </style>
 <g transform="translate(20, 0)" class="layer-BASE">
