@@ -176,7 +176,7 @@
         TMUX {
             display-name = "TMUX";
             bindings = <
-    &none        &none        &none           &none              &none           &none                                                &tmux_copy           &tmux_ses_left     &kp LA(COMMA)      &kp LA(DOT)        &tmux_ses_right  &tmux_split_v
+    &none        &none        &none           &tmux_rename       &none           &none                                                &tmux_copy           &tmux_ses_left     &kp LA(COMMA)      &kp LA(DOT)        &tmux_ses_right  &tmux_split_v
     &none        &none        &none           &none              &kp LSHIFT      &none                                                &kp LC(LEFT)         &kp LC(DOWN)       &kp LC(UP)         &kp LC(RIGHT)      &kp LC(BSLH)     &tmux_split_h
     &none        &none        &none           &none              &none           &none                                                &tmux_newwin         &tmux_win_left     &kp LA(N)          &kp LA(P)          &tmux_win_right  &none
                                                                  &none           &trans            &none           &tmux_zoom         &tmux_picker         &tmux_finder

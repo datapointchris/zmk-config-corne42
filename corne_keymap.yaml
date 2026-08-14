@@ -36,7 +36,7 @@ layers:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - ['', '', '', {type: held}, '', '']
   TMUX:
-  - ['', '', '', '', '', '', COPY, SES ⇤, SES ←, SES →, SES ⇥, 'SPLIT |']
+  - ['', '', '', RENAME, '', '', COPY, SES ⇤, SES ←, SES →, SES ⇥, 'SPLIT |']
   - ['', '', '', '', {t: RESIZE, type: holdmod}, '', PANE ←, PANE ↓, PANE ↑, PANE →, LAST PANE, 'SPLIT -']
   - ['', '', '', '', '', '', NEW WIN, WIN ⇤, WIN ←, WIN →, WIN ⇥, '']
   - ['', {type: held}, '', ZOOM, PICKER, FINDER]
