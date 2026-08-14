@@ -8,7 +8,7 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 
 | File | Purpose |
 | --- | --- |
-| `config/corne.keymap` | Keymap with 10 layers, combos, conditional layers, key position defines |
+| `config/corne.keymap` | Keymap with 11 layers, combos, conditional layers, key position defines |
 | `config/corne.conf` | Shared config (BT power, debounce, display, pointing) |
 | `config/corne_left.conf` | Central-specific (USB, smooth scrolling) |
 | `config/corne_right.conf` | Peripheral-specific (USB disabled) |
@@ -31,21 +31,25 @@ All ZMK repos live under `~/code/zmk/`. See `~/code/zmk/shared/CLAUDE.md` for sh
 | --- | --- | --- |
 | 0 | BASE | QWERTY + home row mods (GASC) + combos |
 | 1 | COLEMAK | Colemak-DH, toggled via inner thumb combo |
-| 2 | DEVLEFT | Programming symbols (left hand) |
-| 3 | NPAD | Number pad (right) + navigation (left) |
-| 4 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
-| 5 | NAV | Arrow keys + F1-F12 + sticky modifiers |
-| 6 | WM | Window manager (Linux default: Super+key) |
-| 7 | OS_MAC | Ghost flag layer (all &trans), toggled for macOS mode |
-| 8 | WM_MAC | macOS WM override (Alt+key), auto-activates via conditional layer when WM + OS_MAC both active |
-| 9 | TMUX | tmux panes, windows and sessions on the right hand, held on `G` (`&ltl TMUX G`) |
+| 2 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
+| 3 | NAV | F1-F12 + arrows + sticky modifiers, held on `G` |
+| 4 | NPAD | Number pad (right) + navigation (left) |
+| 5 | DEVLEFT | Programming symbols (left hand) |
+| 6 | ARROW | Arrows on `E S D F`, modifiers on `J K L ;`, held on the inner right thumb |
+| 7 | TMUX | tmux panes, windows and sessions, held on the middle left thumb |
+| 8 | WM | Window manager (Linux default: Super+key) |
+| 9 | OS_MAC | Ghost flag layer (all `&trans`), toggled for macOS mode |
+| 10 | WM_MAC | macOS WM override (Alt+key), auto-activates via conditional layer when WM + OS_MAC both active |
 
 The TMUX layer emits finished chords and prefix macros, so every action is two
 keys. That is the whole reason it exists — NAV emits bare arrows, which leaves
 the left hand to add Ctrl or Ctrl+Shift and makes the same action three or four.
-Position 37 inside the layer is `&kp LSHIFT`, which turns pane navigation into
-pane resize without a second layer. Same-position side effect: shift also
-reaches the macros, so zoom and the splits do nothing while it is held.
+Position 16 — `F` — inside the layer is `&kp LSHIFT`, which turns pane
+navigation into pane resize without a second layer, held as a thumb-and-index
+pinch. It sits on a left-hand key rather than a thumb because 37 is now the
+layer key itself, which is why TMUX needs `ltltb`: `ltlt` would resolve the
+hold as a backspace when `F` is pressed first. Side effect: shift also reaches
+the macros, so zoom and the splits do nothing while it is held.
 
 ## Runtime OS Switching
 
