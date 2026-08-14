@@ -29,6 +29,10 @@ parse_config:
     - NAV
 
 draw_config:
+  # Layers side by side rather than one tall strip. Stacked, the whole
+  # keymap is three times taller than it is wide and takes 198 terminal
+  # rows to scroll through; in two columns it takes 50.
+  n_columns: 2
   # Optional: Customize appearance
   key_w: 100
   key_h: 100
