@@ -31,9 +31,10 @@ ZMK firmware configuration for the Corne 42-key split keyboard.
 ## Build
 
 ```sh
-make build    # Build firmware → corne_left.uf2, corne_right.uf2
-make sync     # Align + draw + build
-make help     # Show all targets
+zmk check     # What is missing or has drifted
+zmk sync      # Align + draw + build all four halves
+zmk flash     # Pick halves with fzf, then write each
+zmk --help    # Show all commands
 ```
 
 ## Ecosystem

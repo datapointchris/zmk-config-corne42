@@ -2,12 +2,12 @@ layout: {zmk_keyboard: corne}
 layers:
   BASE:
   - [TAB, Q, W, E, R, T, Y, U, I, O, P, \]
-  - [ESC, {t: A, h: GUI}, {t: S, h: Alt}, {t: D, h: Shift}, {t: F, h: Ctrl}, G, H, {t: J, h: Ctrl}, {t: K, h: Shift}, {t: L, h: Alt}, {t: ;, h: GUI}, '''']
+  - [ESC, {t: A, h: GUI}, {t: S, h: Alt}, {t: D, h: Shift}, {t: F, h: Ctrl}, {t: G, h: TMUX}, H, {t: J, h: Ctrl}, {t: K, h: Shift}, {t: L, h: Alt}, {t: ;, h: GUI}, '''']
   - [SYSTEM, Z, X, C, V, B, N, M, ',', ., /, SYSTEM]
-  - [{h: WM}, {t: BSPC, h: NPAD}, {t: DEL, h: NAV}, {t: RET, h: DEVLEFT}, {t: SPACE, h: DEVLEFT}, CAPS]
+  - [{h: WM}, {t: BSPC, h: NAV}, {t: DEL, h: NPAD}, {t: RET, h: DEVLEFT}, {t: SPACE, h: DEVLEFT}, CAPS]
   COLEMAK:
   - [▽, Q, W, F, P, B, J, L, U, Y, ;, ▽]
-  - [▽, {t: A, h: GUI}, {t: R, h: Alt}, {t: S, h: Shift}, {t: T, h: Ctrl}, G, M, {t: N, h: Ctrl}, {t: E, h: Shift}, {t: I, h: Alt}, {t: O, h: GUI}, ▽]
+  - [▽, {t: A, h: GUI}, {t: R, h: Alt}, {t: S, h: Shift}, {t: T, h: Ctrl}, {t: G, h: TMUX}, M, {t: N, h: Ctrl}, {t: E, h: Shift}, {t: I, h: Alt}, {t: O, h: GUI}, ▽]
   - [▽, Z, X, C, D, V, K, H, ',', ., /, ▽]
   - [▽, ▽, ▽, ▽, ▽, ▽]
   DEVLEFT:
@@ -45,6 +45,11 @@ layers:
   - [▽, ws A, ws S, ws D, FLOAT, ▽, FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, ▽, ORIENT]
   - [▽, ws Z, ws X, ▽, ws M, ▽, JOIN ←, JOIN ↓, JOIN ↑, JOIN →, ▽, ▽]
   - [▽, ▽, ▽, FULL, ▽, TAB ↔]
+  TMUX:
+  - ['', '', '', '', '', '', COPY, WIN ⇤, WIN ←, WIN →, WIN ⇥, 'SPLIT |']
+  - ['', '', '', '', '', {type: held}, PANE ←, PANE ↓, PANE ↑, PANE →, LAST PANE, 'SPLIT -']
+  - ['', '', '', '', '', '', NEW WIN, SES ⇤, SES ←, SES →, SES ⇥, '']
+  - ['', RESIZE, '', ZOOM, PICKER, FINDER]
 combos:
   - {p: [1, 2], k: '~', l: [BASE, COLEMAK]}
   - {p: [15, 16], k: '(', l: [BASE, COLEMAK]}
