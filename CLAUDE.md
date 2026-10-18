@@ -17,7 +17,7 @@ Read `~/code/zmk/shared/CLAUDE.md` first: it holds the shared behaviors, the `zm
 | 0 | BASE | QWERTY + home row mods (GASC) + combos |
 | 1 | COLEMAK | Colemak-DH, toggled via inner thumb combo |
 | 2 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
-| 3 | NAV | F1-F12 + arrows + sticky modifiers, held on `G` |
+| 3 | NAV | F1-F12 + arrows + modifiers (GASC), held on `G` |
 | 4 | NPAD | Number pad (right) + navigation (left) |
 | 5 | DEVLEFT | Programming symbols (left hand) |
 | 6 | ARROW | Arrows on `E S D F`, modifiers on `J K L ;`, held on the inner right thumb |
@@ -34,7 +34,9 @@ navigation into pane resize without a second layer, held as a thumb-and-index
 pinch. It sits on a left-hand key rather than a thumb because 37 is the
 layer key itself, which is why TMUX needs `ltltb`: `ltlt` would resolve the
 hold as a backspace when `F` is pressed first. Side effect: shift also reaches
-the macros, so zoom and the splits do nothing while it is held. Rename is worse
+the macros. Zoom and the horizontal split do nothing while it is held, because
+the split's `-` becomes `_`. The vertical split still works, because its `|` is
+already a shifted key. Rename is worse
 than nothing — shifted, its `,` becomes `<`, which tmux binds to move the
 session left.
 
