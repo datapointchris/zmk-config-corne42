@@ -20,18 +20,11 @@ parse_config:
     "&bt_2": "BT 2"
     "&bt_3": "BT 3"
 
-  # Define layer names if display-name doesn't work
-  layer_names:
-    - BASE
-    - DEVLEFT
-    - NPAD
-    - SYSTEM
-    - NAV
+  # Layer names come from each layer's display-name in the keymap.
 
 draw_config:
-  # Layers side by side rather than one tall strip. Stacked, the whole
-  # keymap is three times taller than it is wide and takes 198 terminal
-  # rows to scroll through; in two columns it takes 50.
+  # One layer per row, in keymap order. n_columns: 2 lays them side by
+  # side and nearly halves the drawing's height.
   n_columns: 1
   # Optional: Customize appearance
   key_w: 100
