@@ -10,6 +10,11 @@ layers:
   - [▽, {t: A, h: GUI}, {t: R, h: Alt}, {t: S, h: Shift}, {t: T, h: Ctrl}, {t: G, h: NAV}, M, {t: N, h: Ctrl}, {t: E, h: Shift}, {t: I, h: Alt}, {t: O, h: GUI}, ▽]
   - [▽, Z, X, C, D, V, K, H, ',', ., /, ▽]
   - [▽, ▽, ▽, ▽, ▽, ▽]
+  OS_MAC:
+  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
+  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
+  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
+  - [▽, ▽, ▽, ▽, ▽, ▽]
   SYSTEM:
   - [BT CLR, BT 0, BT 1, BT 2, BT 3, '', '', '', VOL UP, '', '', BT CLR ALL]
   - ['&bootloader', '', '', '', '', 'CTRL ALT DEL', '', PREV, PP, NEXT, '', '&bootloader']
@@ -45,11 +50,6 @@ layers:
   - ['', ws A, ws S, ws D, FLOAT, '', FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, '', ORIENT]
   - ['', ws Z, ws X, '', ws M, '', JOIN ←, JOIN ↓, JOIN ↑, JOIN →, SHIFT, UNGRP]
   - [{type: held}, '', '', FULL, 'Cmd+`', TAB ↔]
-  OS_MAC:
-  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
-  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
-  - [▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽, ▽]
-  - [▽, ▽, ▽, ▽, ▽, ▽]
   WM_MAC:
   - [▽, ▽, ▽, ws E, RESIZE, ▽, MOVE ←, MOVE ↓, MOVE ↑, MOVE →, ▽, LAYOUT]
   - [▽, ws A, ws S, ws D, FLOAT, ▽, FOCUS ←, FOCUS ↓, FOCUS ↑, FOCUS →, ▽, ORIENT]
