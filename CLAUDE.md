@@ -16,14 +16,14 @@ Read `~/code/zmk/shared/CLAUDE.md` first: it holds the shared behaviors, the `zm
 | --- | --- | --- |
 | 0 | BASE | QWERTY + home row mods (GASC) + combos |
 | 1 | COLEMAK | Colemak-DH, toggled via inner thumb combo |
-| 2 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
-| 3 | NAV | F1-F12 + arrows + modifiers (GASC), held on `G` |
-| 4 | NPAD | Number pad (right) + navigation (left) |
-| 5 | DEVLEFT | Programming symbols (left hand) |
-| 6 | ARROW | Arrows on `E S D F`, modifiers on `J K L ;`, held on the inner right thumb |
-| 7 | TMUX | tmux panes, windows and sessions, held on the middle left thumb |
-| 8 | WM | Window manager (Linux default: Super+key) |
-| 9 | OS_MAC | Ghost flag layer (all `&trans`), toggled for macOS mode |
+| 2 | OS_MAC | Ghost flag layer (all `&trans`), toggled for macOS mode; below every held layer so a held layer turns the combos off |
+| 3 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
+| 4 | NAV | F1-F12 + arrows + modifiers (GASC), held on `G` |
+| 5 | NPAD | Number pad (right) + navigation (left) |
+| 6 | DEVLEFT | Programming symbols (left hand) |
+| 7 | ARROW | Arrows on `E S D F`, modifiers on `J K L ;`, held on the inner right thumb |
+| 8 | TMUX | tmux panes, windows and sessions, held on the middle left thumb |
+| 9 | WM | Window manager (Linux default: Super+key) |
 | 10 | WM_MAC | macOS WM override (Alt+key), auto-activates via conditional layer when WM + OS_MAC both active |
 
 The TMUX layer emits finished chords and prefix macros, so every action is two

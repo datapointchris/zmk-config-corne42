@@ -614,7 +614,7 @@ path.combo { stroke-width: 3;}
 </a></g>
 </g>
 </g>
-<g transform="translate(20, 1021)" class="layer-SYSTEM">
+<g transform="translate(20, 1531)" class="layer-SYSTEM">
 <text x="0" y="10" class="label" id="SYSTEM">SYSTEM:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -787,7 +787,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 1531)" class="layer-NAV">
+<g transform="translate(20, 2042)" class="layer-NAV">
 <text x="0" y="10" class="label" id="NAV">NAV:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -948,7 +948,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 2042)" class="layer-NPAD">
+<g transform="translate(20, 2552)" class="layer-NPAD">
 <text x="0" y="10" class="label" id="NPAD">NPAD:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -1117,7 +1117,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 2552)" class="layer-DEVLEFT">
+<g transform="translate(20, 3063)" class="layer-DEVLEFT">
 <text x="0" y="10" class="label" id="DEVLEFT">DEVLEFT:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -1273,7 +1273,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 3063)" class="layer-ARROW">
+<g transform="translate(20, 3573)" class="layer-ARROW">
 <text x="0" y="10" class="label" id="ARROW">ARROW:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -1412,7 +1412,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 3573)" class="layer-TMUX">
+<g transform="translate(20, 4084)" class="layer-TMUX">
 <text x="0" y="10" class="label" id="TMUX">TMUX:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -1597,7 +1597,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 4084)" class="layer-WM">
+<g transform="translate(20, 4594)" class="layer-WM">
 <text x="0" y="10" class="label" id="WM">WM:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">
@@ -1796,7 +1796,7 @@ path.combo { stroke-width: 3;}
 </g>
 </g>
 </g>
-<g transform="translate(20, 4594)" class="layer-OS_MAC">
+<g transform="translate(20, 1021)" class="layer-OS_MAC">
 <text x="0" y="10" class="label" id="OS_MAC">OS_MAC:</text>
 <g transform="translate(0, 20)">
 <g transform="translate(50, 88)" class="key keypos-0">

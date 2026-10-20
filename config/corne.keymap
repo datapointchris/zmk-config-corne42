@@ -17,16 +17,19 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Layer indices. These must match the order of the blocks in `keymap` below.
+// OS_MAC_LAYER sits below every held layer. ZMK matches a combo against the
+// highest active layer alone, so a held layer has to outrank the flag for the
+// combos to stay off while it is held.
 #define BASE 0
 #define COLEMAK 1
-#define SYSTEM 2
-#define NAV 3
-#define NPAD 4
-#define DEVLEFT 5
-#define ARROW 6
-#define TMUX 7
-#define WM 8
-#define OS_MAC_LAYER 9
+#define OS_MAC_LAYER 2
+#define SYSTEM 3
+#define NAV 4
+#define NPAD 5
+#define DEVLEFT 6
+#define ARROW 7
+#define TMUX 8
+#define WM 9
 #define WM_MAC_LAYER 10
 
 #include "shared_behaviors.dtsi"
@@ -128,6 +131,15 @@
                                                                  &trans          &trans            &trans          &trans             &trans               &trans
             >;
         };
+        OS_MAC {
+            display-name = "OS_MAC";
+            bindings = <
+    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
+    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
+    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
+                                                                 &trans          &trans            &trans          &trans             &trans               &trans
+            >;
+        };
         SYSTEM {
             display-name = "SYSTEM";
             bindings = <
@@ -189,15 +201,6 @@
     &none        &kp WMK(A)   &kp WMK(S)      &kp WMK(D)         &kp WMK(F)      &none                                                &kp WMK(H)           &kp WMK(J)         &kp WMK(K)         &kp WMK(L)         &none            &kp WMK(SQT)
     &none        &kp WMK(Z)   &kp WMK(X)      &none              &kp WMK(M)      &none                                                &kp WMCK(H)          &kp WMCK(J)        &kp WMCK(K)        &kp WMCK(L)        &kp LSHIFT       &kp WMCK(G)
                                                                  &trans          &none             &none           &kp WMSK(F)        &kp LG(GRAVE)        &kp WMK(TAB)
-            >;
-        };
-        OS_MAC {
-            display-name = "OS_MAC";
-            bindings = <
-    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
-    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
-    &trans       &trans       &trans          &trans             &trans          &trans                                               &trans               &trans             &trans             &trans             &trans           &trans
-                                                                 &trans          &trans            &trans          &trans             &trans               &trans
             >;
         };
         WM_MAC {

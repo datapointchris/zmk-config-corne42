@@ -77,14 +77,14 @@ afresh afterwards.
 | --- | --- | --- | --- |
 | 0 | BASE | default | QWERTY with home-row mods; Tab and Esc on the left edge, `\` and `'` on the right, Caps Word on the outer right thumb |
 | 1 | COLEMAK | both inner thumbs together, as a toggle | Colemak-DH letters and their home-row mods; every other key falls through to BASE |
-| 2 | SYSTEM | holding the outer key of the bottom row, on either side | Bluetooth profiles and clearing, USB or BLE output, the OS toggle, media, Ctrl+Alt+Del, bootloader and reset |
-| 3 | NAV | holding G | F1–F12 across the top row, arrows on H J K L, plain modifiers on the left home row |
-| 4 | NPAD | holding Delete on the inner left thumb | number pad on the right with 0 on the right thumbs; Home, End, Page Up, Page Down and Insert on the left |
-| 5 | DEVLEFT | holding Space on the middle right thumb | programming symbols under the left hand; the right home-row mods fall through from BASE |
-| 6 | ARROW | holding Enter on the inner right thumb | arrows on E S D F, modifiers on J K L ; |
-| 7 | TMUX | holding Backspace on the middle left thumb | tmux panes, windows and sessions under the right hand |
-| 8 | WM | holding the outer left thumb | window-manager chords: focus on H J K L, move on the row above, join on the row below, workspaces on left-hand letters |
-| 9 | OS_MAC | toggled from SYSTEM | nothing; every key is transparent, and the layer is a flag |
+| 2 | OS_MAC | toggled from SYSTEM | nothing; every key is transparent, and the layer is a flag |
+| 3 | SYSTEM | holding the outer key of the bottom row, on either side | Bluetooth profiles and clearing, USB or BLE output, the OS toggle, media, Ctrl+Alt+Del, bootloader and reset |
+| 4 | NAV | holding G | F1–F12 across the top row, arrows on H J K L, plain modifiers on the left home row |
+| 5 | NPAD | holding Delete on the inner left thumb | number pad on the right with 0 on the right thumbs; Home, End, Page Up, Page Down and Insert on the left |
+| 6 | DEVLEFT | holding Space on the middle right thumb | programming symbols under the left hand; the right home-row mods fall through from BASE |
+| 7 | ARROW | holding Enter on the inner right thumb | arrows on E S D F, modifiers on J K L ; |
+| 8 | TMUX | holding Backspace on the middle left thumb | tmux panes, windows and sessions under the right hand |
+| 9 | WM | holding the outer left thumb | window-manager chords: focus on H J K L, move on the row above, join on the row below, workspaces on left-hand letters |
 | 10 | WM_MAC | holding WM while OS_MAC is on | the WM chords, sent on Alt |
 
 Home-row mods run GASC from the pinky inward: GUI, Alt, Shift, Ctrl, mirrored on the right. On
@@ -144,8 +144,8 @@ again.
 
 Every combo lists `OS_MAC_LAYER` in its `layers`. ZMK checks a combo against the highest active
 layer alone. In macOS mode, that is the flag. Without the entry, no combo fires in macOS mode.
-The flag also sits above SYSTEM, NAV, NPAD, DEVLEFT, ARROW and TMUX. So in macOS mode the combos
-fire while one of those is held, too.
+The flag sits below SYSTEM, NAV, NPAD, DEVLEFT, ARROW, TMUX and WM. A held layer then outranks
+it, so no combo fires while one is held, on either system.
 
 ## Building — local builds see `../shared` live; CI sees only what is pushed
 
