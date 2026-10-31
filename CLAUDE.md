@@ -36,9 +36,8 @@ layer key itself, which is why TMUX needs `ltltb`: `ltlt` would resolve the
 hold as a backspace when `F` is pressed first. Side effect: shift also reaches
 the macros. Zoom and the horizontal split do nothing while it is held, because
 the split's `-` becomes `_`. The vertical split still works, because its `|` is
-already a shifted key. Rename is worse
-than nothing — shifted, its `,` becomes `<`, which tmux binds to move the
-session left.
+already a shifted key. Rename is worse than nothing — shifted, its `,` becomes
+`<`, which tmux binds to move the session left.
 
 ## Guardrails
 

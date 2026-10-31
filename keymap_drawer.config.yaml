@@ -20,8 +20,6 @@ parse_config:
     "&bt_2": "BT 2"
     "&bt_3": "BT 3"
 
-  # Layer names come from each layer's display-name in the keymap.
-
 draw_config:
   # One layer per row, in keymap order. n_columns: 2 lays them side by
   # side and nearly halves the drawing's height.

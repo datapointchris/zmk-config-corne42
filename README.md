@@ -7,8 +7,8 @@ The behaviors the keymap binds are defined in
 [zmk-shared](https://github.com/datapointchris/zmk-shared): home-row mods, thumb layer-taps,
 Bluetooth tap-dances, and the window-manager and tmux macros. The Glove80 and Piantor configs
 include that module too. A change to how a behavior acts belongs there. A change to which key binds
-it belongs here. So does the rest of what is this Corne's own: its key positions, its layer order,
-its combos, its OS switch and its build matrix. [zmk](https://github.com/datapointchris/zmk) is the
+it belongs here, as does everything specific to this Corne: its key positions, its layer order, its
+combos, its OS switch and its build matrix. [zmk](https://github.com/datapointchris/zmk) is the
 tool that builds, draws, checks and flashes it.
 
 ## Install
@@ -168,10 +168,10 @@ Every push and pull request builds on GitHub Actions, through upstream ZMK's reu
 `.uf2` per `build.yaml` entry. A fork with no Docker can flash from that.
 
 `corne_keymap.yaml`, the drawing's source, is written by hand. A keymap edit never reaches the
-drawing by itself. The SVG still renders cleanly. `zmk check` is what notices. It compares
-every cell by class: a key, transparent, or none. It also checks that each key holding a layer open
-is labeled with that layer. Other labels are free text, so it does not compare them. `zmk sync`
-redraws from the YAML without checking it.
+drawing by itself, and a stale drawing renders without an error. `zmk check` is what notices. It
+compares every cell by class: a key, transparent, or none. It also checks that each key holding a
+layer open is labeled with that layer. Other labels are free text, so it does not compare them.
+`zmk sync` redraws from the YAML without checking it.
 
 `--pristine` wipes only the build directories. A bad CMake flag persists in their cache until then.
 `zmk clean` is the heavier reset. It deletes this repo's firmware and its whole west workspace. The
