@@ -190,6 +190,10 @@ right half is a peripheral that reaches only the left, over Bluetooth. `config/c
 to both halves. `config/corne_left.conf` turns on USB and smooth scrolling.
 `config/corne_right.conf` turns USB off.
 
+Selecting a Bluetooth profile on SYSTEM also selects Bluetooth output, and ZMK keeps that choice
+across reboots. A left half on a USB cable then charges over it and still types over Bluetooth. Hold
+SYSTEM and press the middle left thumb to type over USB.
+
 The rest of `config/corne.conf` sets these:
 
 - The board sleeps after two hours idle. A key press wakes it. The wake is a reboot.
@@ -201,6 +205,30 @@ The rest of `config/corne.conf` sets these:
 - `CONFIG_ZMK_BLE_EXPERIMENTAL_SEC` stays off. It switches pairing to a passkey, which hangs on
   Linux's BlueZ.
 - Pointing is on, with smooth scrolling on the central. No layer binds a pointing key.
+
+## Doubled letters — read the key events before blaming the firmware
+
+A doubled or missing letter comes from either a switch or a radio link, and the key events tell the
+two apart. Run `sudo evtest`, pick the keyboard's device, and type until it happens.
+
+- **A switch losing contact mid-press** shows a press, a release 10–45 ms later, then a second press
+  within a few ms, all inside one keystroke. The debounce only reports a release after 10 ms of open
+  contact, so the switch really opened.
+- **A lost release over Bluetooth** shows one press held for hundreds of ms, with the host's
+  autorepeat events (`value 2`) behind it. A lost press shows a release with no press, or no
+  events at all.
+
+Bluetooth cannot produce the first pattern. Each report carries the whole key state, so a lost or
+repeated report never adds a release and a fresh press. A left-hand key never crosses the link
+between the halves either. So a double on the left half is never that link.
+
+Reseat the switch first. Pull it, check that both pins are straight, and press it back until it
+clicks into the plate. If the double persists, swap the switch with a neighbor. A double that follows
+the switch means a bad switch. A double that stays in place means a cracked solder joint on the
+hot-swap socket.
+
+Change one thing between captures. Reseating a switch and changing the output in one test leaves
+either as the cause.
 
 ## Beside the other configs — the Piantor shares the positions, not the board
 
