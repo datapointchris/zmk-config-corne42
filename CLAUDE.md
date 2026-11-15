@@ -12,32 +12,13 @@ Read `~/code/zmk/shared/CLAUDE.md` first: it holds the shared behaviors, the `zm
 
 ## Layers
 
-| # | Layer | Purpose |
-| --- | --- | --- |
-| 0 | BASE | QWERTY + home row mods (GASC) + combos |
-| 1 | COLEMAK | Colemak-DH, toggled via inner thumb combo |
-| 2 | OS_MAC | Ghost flag layer (all `&trans`), toggled for macOS mode; below every held layer so a held layer turns the combos off |
-| 3 | SYSTEM | Bluetooth, media, bootloader, OS toggle |
-| 4 | NAV | F1-F12 + arrows + modifiers (GASC), held on `G` |
-| 5 | NPAD | Number pad (right) + navigation (left) |
-| 6 | DEVLEFT | Programming symbols (left hand) |
-| 7 | ARROW | Arrows on `E S D F`, modifiers on `J K L ;`, held on the inner right thumb |
-| 8 | TMUX | tmux panes, windows and sessions, held on the middle left thumb |
-| 9 | WM | Window manager (Linux default: Super+key) |
-| 10 | WM_MAC | macOS WM override (Alt+key), auto-activates via conditional layer when WM + OS_MAC both active |
+The layer numbers are the `#define` block at the top of `config/corne.keymap`, and each must
+match its block's position in `keymap`. README § "Layers" describes what each layer holds and how
+it is reached.
 
-The TMUX layer emits finished chords and prefix macros, so every action is two
-keys. That is the whole reason it exists — NAV emits bare arrows, which leaves
-the left hand to add Ctrl or Ctrl+Shift and makes the same action three or four.
-Position 16 — `F` — inside the layer is `&kp LSHIFT`, which turns pane
-navigation into pane resize without a second layer, held as a thumb-and-index
-pinch. It sits on a left-hand key rather than a thumb because 37 is the
-layer key itself, which is why TMUX needs `ltltb`: `ltlt` would resolve the
-hold as a backspace when `F` is pressed first. Side effect: shift also reaches
-the macros. Zoom and the horizontal split do nothing while it is held, because
-the split's `-` becomes `_`. The vertical split still works, because its `|` is
-already a shifted key. Rename is worse than nothing — shifted, its `,` becomes
-`<`, which tmux binds to move the session left.
+TMUX opens on `ltltb`, not `ltlt`, because position 16 (`F`) inside it is `&kp LSHIFT`. A plain
+`ltlt` would resolve the hold as Backspace when `F` is pressed first. README § "TMUX and ARROW"
+explains the layer and what Shift does to its macros.
 
 ## Guardrails
 
