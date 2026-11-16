@@ -125,7 +125,9 @@ layer needs a tmux config that matches it.
 F is Shift inside TMUX. Held with the thumb, it turns the Ctrl+arrow pane moves into
 Ctrl+Shift+arrow, which a matching config binds to resize. It sits on F because the middle left
 thumb is the layer key itself. Shift reaches the macros as well, so a macro pressed while F is held
-arrives shifted.
+arrives shifted. Zoom and the horizontal split then do nothing, because the split's `-` becomes `_`.
+The vertical split still works, because its `|` is already a shifted key. Rename does worse: its `,`
+becomes `<`, which tmux binds to move the session left.
 
 ## One firmware per half — the OS is switched on the keyboard, not at build time
 
