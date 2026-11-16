@@ -32,6 +32,10 @@
 #define WM 9
 #define WM_MAC_LAYER 10
 
+// The layers every combo fires on. OS_MAC_LAYER is in the set because in
+// macOS mode the flag is the highest active layer.
+#define COMBO_LAYERS BASE COLEMAK OS_MAC_LAYER
+
 #include "shared_behaviors.dtsi"
 
 / {
@@ -42,35 +46,35 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <1 2>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp TILDE>;
         };
         combo_lparen {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <16 15>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp LPAR>;
         };
         combo_lbracket {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <14 15>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp LBKT>;
         };
         combo_lbrace {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <14 16>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp LBRC>;
         };
         combo_underscore {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <13 14>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp UNDERSCORE>;
         };
         /* ----- RIGHT HAND ----- */
@@ -78,28 +82,28 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <19 20>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp RPAR>;
         };
         combo_rbracket {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <20 21>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp RBKT>;
         };
         combo_rbrace {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <19 21>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp RBRC>;
         };
         combo_hyphen {
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             key-positions = <21 22>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
             bindings = <&kp MINUS>;
         };
         combo_colemak_toggle {
@@ -107,7 +111,7 @@
             require-prior-idle-ms = <300>;
             key-positions = <38 39>;
             bindings = <&tog COLEMAK>;
-            layers = <BASE COLEMAK OS_MAC_LAYER>;
+            layers = <COMBO_LAYERS>;
         };
     };
 

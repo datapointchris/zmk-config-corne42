@@ -142,7 +142,8 @@ systems, because WM_MAC leaves that key transparent.
 The toggle lives in RAM. A reset, a power cycle or a wake from deep sleep starts the board on Linux
 again.
 
-Every combo lists `OS_MAC_LAYER` in its `layers`. ZMK checks a combo against the highest active
+Every combo reads its `layers` from `COMBO_LAYERS`, defined beside the layer indices, and that set
+includes `OS_MAC_LAYER`. ZMK checks a combo against the highest active
 layer alone. In macOS mode, that is the flag. Without the entry, no combo fires in macOS mode.
 The flag sits below SYSTEM, NAV, NPAD, DEVLEFT, ARROW, TMUX and WM. A held layer then outranks
 it, so no combo fires while one is held, on either system.
